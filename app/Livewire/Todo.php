@@ -3,21 +3,30 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use Livewire\Attributes\Title;
+
+#[Title('Todo List')]
 
 class Todo extends Component
 {
     public $todo = '';
-    public $todos = [
-        'Go to the shop',
-        'Go to the market',
-        'Go to work',
-    ];
+    public $todos = [];
 
     public function add()
     {
-         $this->todos[] = $this->todo;
-         $this->reset('todo') ;
+        $this->todos[] = $this->todo;
+        $this->reset('todo') ;
     }
+
+    // public function updated($property,$value)
+    // {
+    //     dd($property,$value);
+    // }
+
+    // public function mount()
+    // {
+    //     dd('Todo mounted');
+    // }
 
     public function render()
     {
