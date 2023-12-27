@@ -16,9 +16,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+//  Route::get('/', function () {
+//       return view('home');
+//  });
 Route::get('/', HelloWorld::class);
-  Route::get('/todo', Todo::class);
+Route::get('/todo', Todo::class);
 Route::get('/counter', Counter::class);
+Route::get('/charts',  function () {
+      return view('charts');
+   });
