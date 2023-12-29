@@ -18,9 +18,12 @@ class Todo extends Component
         $this->reset('todo') ;
     }
 
+    //  LIFECYCLE hooks
+
     // public function updated($property,$value)
     // {
-    //     dd($property,$value);
+    //     dd('UPDATED '.$property.' > '.$value);
+    //   //could do some validation  in this hook for example
     // }
 
     // public function mount()

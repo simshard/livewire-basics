@@ -3,6 +3,7 @@
 use App\Livewire\Todo;
 use App\Livewire\Counter;
 use App\Livewire\HelloWorld;
+use App\Livewire\ShowPosts;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', HelloWorld::class);
 Route::get('/todo', Todo::class);
 Route::get('/counter', Counter::class);
-Route::get('/charts',  function () {
-      return view('charts');
-   });
+Route::get('/posts', ShowPosts::class);
+
+// Route::get('/charts', function () {
+//     return view('charts');
+// });
