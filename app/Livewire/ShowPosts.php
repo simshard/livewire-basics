@@ -14,10 +14,8 @@ class ShowPosts extends Component
 
     public function render()
     {
-     
-        
         return view('livewire.show-posts',[
-            'posts' => Post::all(),
+            'posts' => Post::orderBy('created_at', 'desc')->get(),
         ]);
     }
 }
