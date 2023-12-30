@@ -17,23 +17,6 @@ class CreatePostTest extends TestCase
 {
     use RefreshDatabase;
 
-//    public function setUp()
-//    {
-//        parent::setUp();
- 
-//        $this->artisan('migrate');
-//        $this->artisan('db:seed');
-//    }
- 
-//    public function tearDown()
-//    {
-//        $this->artisan('migrate:reset');
-//    }
-
-
-
-
-
     /** @test */
     public function renders_successfully()
     {
@@ -58,5 +41,15 @@ class CreatePostTest extends TestCase
         $this->assertEquals('My test post', $post->title);
         $this->assertEquals('My test body', $post->body);
 
+     }
+
+     /** @test */
+     public function title_is_required()
+     {
+        Livewire::test(CreatePost::class)
+                ->set('title', '')
+                ->set('body', 'My test body')
+                ->call('save')
+                ->assertHasErrors(['title' => 'required']);
      }
 }
