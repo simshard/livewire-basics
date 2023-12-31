@@ -25,7 +25,7 @@ Route::get('/', HelloWorld::class);
 Route::get('/todo', Todo::class);
 Route::get('/counter', Counter::class);
 Route::get('/posts', ShowPosts::class);
- Route::get('/new-post', CreatePost::class);
+Route::get('/new-post', CreatePost::class);
 
 // Route::get('/charts', function () {
 //     return view('charts');

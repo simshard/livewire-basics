@@ -10,10 +10,10 @@
     <body>
         <nav class="mx-auto mb-4 py-4 bg-slate-100 border border-slate-300">
             <ul   class="flex flex-row justify-left content-between list-inside list-disc text-gray-600 text-xl">
-           <li class="mx-4"> <a href="/">Home</a></li>
-            <li class="mx-4"><a href="/counter">Counter</a></li>
-            <li class="mx-4"><a href="/todo">Todos</a></li>
-            <li class="mx-4"><a href="/posts">Posts</a></li>
+           <li class="mx-4"> <a wire:navigate href="/">Home</a></li>
+            <li class="mx-4"><a wire:navigate href="/counter">Counter</a></li>
+            <li class="mx-4"><a wire:navigate href="/todo">Todos</a></li>
+            <li class="mx-4"><a wire:navigate href="/posts">Posts</a></li>
         </ul>
         </nav>
         

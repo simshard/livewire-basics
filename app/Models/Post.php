@@ -19,4 +19,6 @@ class Post extends Model
         'body',
         'user_id',
     ];
+
+
 }
