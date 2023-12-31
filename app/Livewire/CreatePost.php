@@ -24,7 +24,7 @@ class CreatePost extends Component
         ]);
         $this->title = "";
         $this->body = "";
-        $this->redirect('/posts');
+        $this->redirect('/posts', navigate:true);
     }
          
     
